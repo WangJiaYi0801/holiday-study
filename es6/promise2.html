@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        let p1 = new Promise(function(resolve, reject) {
+            $.ajax({
+                url: 'data/1.txt',
+                dataType: 'json',
+                success(arr) {
+                    resolve(arr);
+                },
+                error(err) {
+                    reject(err);
+                }
+            });
+        });
+
+        let p2 = new Promise(function(resolve, reject) {
+            $.ajax({
+                url: 'data/2.txt',
+                dataType: 'json',
+                success(arr) {
+                    resolve(arr);
+                },
+                error(err) {
+                    reject(err);
+                }
+            });
+        });
+
+        let p3 = new Promise(function(resolve, reject) {
+            $.ajax({
+                url: 'data/3.txt',
+                dataType: 'json',
+                success(arr) {
+                    resolve(arr);
+                },
+                error(err) {
+                    reject(err);
+                }
+            });
+        });
+
+        Promise.all([p1, p2, p3]).then(arr => {
+            let [r1, r2, r3] = arr;
+
+            alert(r1);
+            alert(r2);
+            alert(r3);
+        }, err => {
+            alert('错了');
+        });
+    </script>
+    <script>
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
