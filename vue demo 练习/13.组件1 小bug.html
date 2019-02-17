@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <table>
+            <h3>不加is属性的导致tr table外面</h3>
+            <tbody>
+                <row></row>
+                <row></row>
+                <row></row>
+            </tbody>
+        </table>
+
+        <h3>增加is属性的可以解决使用组件遇到的小bug</h3>
+        <table>
+            <tbody>
+                <tr is="row"></tr>
+                <tr is="row"></tr>
+                <tr is="row"></tr>
+            </tbody>
+        </table>
+
+        <!-- is属性的使用场景: ul li ol section option
+        <section>
+            <option value=""></option>
+        </section>
+        <ul>
+            <li></li>
+        </ul>
+        <ol>
+            <li></li>
+        </ol> -->
+    </div>
+
+    <script>
+        Vue.component("row", {
+            template: "<tr><td>这是一个组件</td></tr>"
+        })
+
+        let vm = new Vue({
+            el: "#app",
+            data: {}
+        })
+    </script>
+</body>
+
+</html>
