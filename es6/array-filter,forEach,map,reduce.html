@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        let arr = [12, 5, 8, 99, 27, 24, 30, 13];
+
+        // let arr2 = arr.filter(item => {
+        //     if (item % 2 == 0) {
+        //         return false;
+        //     } else {
+        //         return true;
+        //     }
+        // });
+        // alert(arr2);
+
+        // let arr2 = arr.filter(item => item % 2);
+        // alert(arr2);
+
+        // arr.forEach((item, index) => {
+        //     alert(`第${index}个是${item}`);
+        // });
+
+        // let arr2 = arr.map(function(item) {
+        //     return item * 2;
+        // });
+        // alert(arr2);
+
+        // let arr2 = arr.map(item => item * 2);
+        // alert(arr2);
+
+        // let result = arr.reduce((tmp, item, index) => {
+        //     return tmp + item;
+        // });
+        // alert(result);
+
+        let result = arr.reduce((tmp, item, index) => {
+            if (index < arr.length - 1) {
+                return tmp + item;
+            } else {
+                return (tmp + item) / arr.length;
+            }
+        });
+        alert(result);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // function User(name, pass) {
+        //     this.name = name;
+        //     this.pass = pass;
+        // }
+        // User.prototype.login = function() {
+        //     alert('登陆成功');
+        // };
+
+        class User {
+            constructor(name, pass) {
+                this.name = name;
+                this.pass = pass;
+            }
+
+            login() {
+                alert('成功');
+            }
+        }
+
+        let u = new User('blue', '123456');
+
+        u.login();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
